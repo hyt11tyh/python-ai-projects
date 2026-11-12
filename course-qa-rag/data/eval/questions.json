@@ -1,0 +1,324 @@
+{
+  "topic": "机器学习与信息检索基础",
+  "description": "基于 data/sample 中的示例讲义。expected_points 用于粗粒度检查答案是否覆盖关键说法；斜线表示同义表述即可。",
+  "questions": [
+    {
+      "id": 1,
+      "question": "什么是机器学习？它和传统编程有什么区别？",
+      "relevant_sources": [
+        "01-机器学习概述.md"
+      ],
+      "retrieval_keywords": [
+        "传统编程",
+        "目标函数"
+      ],
+      "expected_points": [
+        "从数据中学习/发现规律",
+        "传统编程/人工编写规则",
+        "估计模型参数/优化目标函数"
+      ]
+    },
+    {
+      "id": 2,
+      "question": "一个典型的机器学习项目通常包含哪些步骤？",
+      "relevant_sources": [
+        "01-机器学习概述.md"
+      ],
+      "retrieval_keywords": [
+        "特征工程",
+        "验证与调参"
+      ],
+      "expected_points": [
+        "问题定义",
+        "数据收集/清洗",
+        "特征工程",
+        "训练",
+        "验证/调参",
+        "测试/部署"
+      ]
+    },
+    {
+      "id": 3,
+      "question": "为什么要把数据分成训练集、验证集和测试集？它们各自干什么？",
+      "relevant_sources": [
+        "01-机器学习概述.md",
+        "02-监督学习与无监督学习.md"
+      ],
+      "retrieval_keywords": [
+        "验证集",
+        "测试集"
+      ],
+      "expected_points": [
+        "训练集学习参数/训练",
+        "验证集选择超参数/调参",
+        "测试集估计泛化",
+        "不要在测试集上反复调参/测试集只使用一次"
+      ]
+    },
+    {
+      "id": 4,
+      "question": "监督学习和无监督学习有什么区别？请各举一个典型任务。",
+      "relevant_sources": [
+        "02-监督学习与无监督学习.md"
+      ],
+      "retrieval_keywords": [
+        "带标签",
+        "聚类"
+      ],
+      "expected_points": [
+        "监督学习有标签/带标签",
+        "无监督学习没有标签/不带标签",
+        "分类/回归",
+        "聚类/降维/异常检测"
+      ]
+    },
+    {
+      "id": 5,
+      "question": "线性回归的模型形式是什么？最常用的损失函数是什么？",
+      "relevant_sources": [
+        "03-线性模型与梯度下降.md"
+      ],
+      "retrieval_keywords": [
+        "均方误差",
+        "加权和"
+      ],
+      "expected_points": [
+        "特征的加权和/加权和再加偏置",
+        "均方误差/MSE"
+      ]
+    },
+    {
+      "id": 6,
+      "question": "梯度下降中的学习率过大会怎样，过小又会怎样？",
+      "relevant_sources": [
+        "03-线性模型与梯度下降.md"
+      ],
+      "retrieval_keywords": [
+        "学习率",
+        "发散"
+      ],
+      "expected_points": [
+        "过大震荡/发散",
+        "过小收敛很慢/收敛慢"
+      ]
+    },
+    {
+      "id": 7,
+      "question": "批量梯度下降、随机梯度下降和小批量梯度下降有什么区别？深度学习里常用哪一种？",
+      "relevant_sources": [
+        "03-线性模型与梯度下降.md"
+      ],
+      "retrieval_keywords": [
+        "小批量",
+        "SGD"
+      ],
+      "expected_points": [
+        "批量用全部训练样本/全部样本",
+        "SGD/随机梯度下降用一个样本",
+        "小批量用一个batch/一批样本",
+        "深度学习常用小批量"
+      ]
+    },
+    {
+      "id": 8,
+      "question": "什么是过拟合和欠拟合？",
+      "relevant_sources": [
+        "04-决策树与过拟合.md"
+      ],
+      "retrieval_keywords": [
+        "过拟合",
+        "欠拟合"
+      ],
+      "expected_points": [
+        "过拟合训练集好/训练好测试差",
+        "欠拟合训练和测试都差/两者都差",
+        "偏差/方差"
+      ]
+    },
+    {
+      "id": 9,
+      "question": "决策树常用哪些方法来缓解过拟合？",
+      "relevant_sources": [
+        "04-决策树与过拟合.md"
+      ],
+      "retrieval_keywords": [
+        "剪枝",
+        "随机森林"
+      ],
+      "expected_points": [
+        "预剪枝/限制深度",
+        "后剪枝",
+        "正则化",
+        "随机森林/梯度提升/集成"
+      ]
+    },
+    {
+      "id": 10,
+      "question": "为什么神经网络需要非线性激活函数？",
+      "relevant_sources": [
+        "05-神经网络基础.md"
+      ],
+      "retrieval_keywords": [
+        "非线性",
+        "线性模型"
+      ],
+      "expected_points": [
+        "没有非线性/多层仍是线性",
+        "表达能力不会增强/仍等价于线性模型"
+      ]
+    },
+    {
+      "id": 11,
+      "question": "ReLU 是如何定义的？它有什么优点，又有什么潜在问题？",
+      "relevant_sources": [
+        "05-神经网络基础.md"
+      ],
+      "retrieval_keywords": [
+        "ReLU",
+        "失活"
+      ],
+      "expected_points": [
+        "max(0, x)/取输入和0的较大值",
+        "计算简单",
+        "负半轴梯度为0/神经元失活"
+      ]
+    },
+    {
+      "id": 12,
+      "question": "当类别极不平衡时，为什么准确率可能具有误导性？请举讲义中的例子。",
+      "relevant_sources": [
+        "06-模型评估指标.md"
+      ],
+      "retrieval_keywords": [
+        "不平衡",
+        "99%"
+      ],
+      "expected_points": [
+        "类别不平衡/正类很少",
+        "全部预测为负类",
+        "准确率仍然很高/99%"
+      ]
+    },
+    {
+      "id": 13,
+      "question": "精确率和召回率分别关注什么？F1 分数怎么定义？",
+      "relevant_sources": [
+        "06-模型评估指标.md"
+      ],
+      "retrieval_keywords": [
+        "精确率",
+        "召回率",
+        "F1"
+      ],
+      "expected_points": [
+        "精确率关注误报/预测为正里有多少是对的",
+        "召回率关注漏报/实际正类被找出多少",
+        "调和平均"
+      ]
+    },
+    {
+      "id": 14,
+      "question": "ROC 曲线的横轴和纵轴分别是什么？AUC 表示什么？",
+      "relevant_sources": [
+        "06-模型评估指标.md"
+      ],
+      "retrieval_keywords": [
+        "ROC",
+        "AUC"
+      ],
+      "expected_points": [
+        "横轴是假正例率/FPR",
+        "纵轴是真正例率/TPR/召回率",
+        "AUC是曲线下面积",
+        "越接近1越好/排序质量"
+      ]
+    },
+    {
+      "id": 15,
+      "question": "标准化和归一化有什么区别？缩放用到的均值或最值应该在哪部分数据上估计？",
+      "relevant_sources": [
+        "07-特征工程基础.txt"
+      ],
+      "retrieval_keywords": [
+        "标准化",
+        "训练集"
+      ],
+      "expected_points": [
+        "标准化减均值除以标准差/Z-score",
+        "归一化缩放到0到1/Min-Max",
+        "只能从训练集估计"
+      ]
+    },
+    {
+      "id": 16,
+      "question": "什么是数据泄漏？请举一个特征工程中的例子。",
+      "relevant_sources": [
+        "07-特征工程基础.txt"
+      ],
+      "retrieval_keywords": [
+        "数据泄漏",
+        "测试集"
+      ],
+      "expected_points": [
+        "预测时刻无法获得的信息/泄漏",
+        "用测试集统计量/用未来信息",
+        "上线时是否可用"
+      ]
+    },
+    {
+      "id": 17,
+      "question": "BM25 相比简单词频有哪些改进？为什么它适合作为本地检索的默认方案？",
+      "relevant_sources": [
+        "08-信息检索与RAG简介.pdf"
+      ],
+      "retrieval_keywords": [
+        "BM25",
+        "IDF"
+      ],
+      "expected_points": [
+        "词频饱和/不会无限上升",
+        "文档长度归一化",
+        "IDF/降低常用词权重",
+        "不需要大型向量模型/计算轻量"
+      ]
+    },
+    {
+      "id": 18,
+      "question": "检索增强生成（RAG）的基本流程是什么？它为什么有助于减轻幻觉？",
+      "relevant_sources": [
+        "08-信息检索与RAG简介.pdf"
+      ],
+      "retrieval_keywords": [
+        "幻觉",
+        "检索增强"
+      ],
+      "expected_points": [
+        "切分/建立索引",
+        "检索相关片段",
+        "把上下文和问题送给模型",
+        "只依据上下文作答",
+        "减轻幻觉/减少编造"
+      ]
+    },
+    {
+      "id": 19,
+      "question": "Transformer 的多头注意力是如何计算的？请写出缩放点积注意力的公式。",
+      "relevant_sources": [],
+      "retrieval_keywords": [],
+      "expected_points": [
+        "根据现有资料无法回答/资料不足"
+      ],
+      "unanswerable": true
+    },
+    {
+      "id": 20,
+      "question": "支持向量机的对偶问题和核技巧是怎样推导的？",
+      "relevant_sources": [],
+      "retrieval_keywords": [],
+      "expected_points": [
+        "根据现有资料无法回答/资料不足"
+      ],
+      "unanswerable": true
+    }
+  ]
+}
